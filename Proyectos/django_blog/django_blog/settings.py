@@ -38,10 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_crud.apps.DjangoCrudConfig',
+    'rest_framework',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -116,3 +119,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+# Permitir solicitudes de estos orígenes específicos - Aument
+CORS_ALLOWED_ORIGINS = [
+    # Reemplaza 5173 si tu app Vue usa otro puerto
+    "http://localhost:5173", 
+    "http://127.0.0.1:5173", 
+]
+
+# Si estás probando sin el router de Vue (solo el archivo HTML)
+# CORS_ALLOW_ALL_ORIGINS = True # <-- SOLO para desarrollo rápido, NO para producción
+
+# Permitir cookies/credenciales (útil para autenticación en el futuro)
+CORS_ALLOW_CREDENTIALS = True

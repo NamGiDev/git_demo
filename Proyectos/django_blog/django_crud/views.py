@@ -23,7 +23,7 @@ def task_list_and_create(request):
         'incomplete_tasks':incomplete_task
     })
 
-def update_taks(request, task_id):
+def update_task(request, task_id):
     if request.method == 'POST':
         task = Task.objects.get(id=task_id)
         task.is_completed = not task.is_completed
