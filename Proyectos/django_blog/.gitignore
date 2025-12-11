@@ -1,0 +1,54 @@
+# -----------------------------------------------------------------------------
+# Entornos Virtuales
+# -----------------------------------------------------------------------------
+# Directorio del entorno virtual de Python
+env/
+venv/
+ENV/
+.env/
+.venv/
+env_django/  # <-- ¡Importante! Si tu entorno se llama así, inclúyelo
+
+# -----------------------------------------------------------------------------
+# Archivos Generados por Python
+# -----------------------------------------------------------------------------
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+*~
+.pytest_cache/
+
+# -----------------------------------------------------------------------------
+# Archivos de Django y Base de Datos
+# -----------------------------------------------------------------------------
+# Base de datos SQLite (si la usas)
+db.sqlite3
+*.sqlite3
+
+# Archivos de medios subidos (media files)
+# Los archivos estáticos generados por collectstatic
+/media/
+/static_root/
+staticfiles/
+
+# Logs y sesiones
+*.log
+*.pot
+*.mo
+*.prof
+.DS_Store # Archivos de Mac OS
+
+# -----------------------------------------------------------------------------
+# Secretos y Variables de Entorno
+# -----------------------------------------------------------------------------
+# Archivo donde guardas variables sensibles (ej. SECRET_KEY, credenciales)
+.env
+.flaskenv
+
+# -----------------------------------------------------------------------------
+# Herramientas de Desarrollo y IDEs
+# -----------------------------------------------------------------------------
+.idea/      # PyCharm, IntelliJ
+.vscode/    # Visual Studio Code
+*.sublime-* # Sublime Text
